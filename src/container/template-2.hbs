@@ -1,0 +1,101 @@
+<div class="page">
+  <div class='page-content'>
+    <div class='page_block'>
+      <header class='header row g-0'>
+        <div class='col-3'>
+          {{> logo}}
+        </div>
+        <nav class='header_nav col-9'>
+          <div class='header_nav_right'>
+            {{> nav list=header}}
+          </div>
+        </nav>
+      </header>
+      <hr class='divider' />
+    </div>
+
+    <div class='page_block'>
+      <div class='hero'>
+        {{> hero title=hero.title text=hero.text}}
+        <a href='{{hero.button.url}}' class='button'>{{hero.button.text}}</a>
+      </div>
+    </div>
+
+    <div class='page_block'>
+      <div class='row g-4'>
+        {{#each preview}}
+          <div class='col-6'>
+            {{> card-preview data=this}}
+          </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <div class='page_block'>
+      <div class='news'>
+
+        <div class='news_header'>
+          <div class='row'>
+
+            <div class='col'>
+              <strong class='news_title'>List of posts</strong>
+            </div>
+
+            <div class='col'>
+              <div class='categories'>
+                {{#each categories}}
+                  <button class='news_category_button'>
+                    <span>{{text}}</span>
+                  </button>
+                {{/each}}
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <hr class='divider'/>
+
+        <div class='news_content'>
+          <div class='row g-0'>
+            
+            <div class='col-8'>
+              <div class='news_list'>
+                
+                {{#each news}}
+                  {{> news-item}}
+                {{/each}}
+              </div>
+            </div>
+
+            <div class='col-4'>
+              {{> news-nav}}
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+
+    <div class='page_block'>
+      <hr class='divider' />
+      <footer class='footer row'>
+        <div class='col-3'>
+          {{> logo}}
+            <span class='footer_copyright'>Copyright 2023-2024</span>
+        </div>
+        {{#each footer}}
+          <div class='col-3'>
+            <span class='footer_title'>{{title}}</span>
+            {{> nav list=links isVertical=true}}
+          </div>
+        {{/each}}
+        
+      </footer>
+    </div>
+  </div>
+  
+
+</div>
+

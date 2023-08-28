@@ -1,0 +1,19 @@
+<div class='news_nav'>
+  <div class='news_nav_about'> 
+    <strong class='news_nav_title'>About</strong>
+    <p class='news_nav_text'>{{about}}</p>
+  </div>
+  <div class='news_nav_links'>
+    <strong class='news_nav_title'>Archives</strong>
+    {{#each archive}}
+      <a href='{{url}}' class='news_nav_link'>{{text}}</a>
+    {{/each}}
+  </div>
+  <div class='news_nav_links'>
+    <strong class='news_nav_title'>Social</strong>
+    {{#each social}}
+      <a href='{{url}}' class='news_nav_link'>{{text}}</a>
+    {{/each}}
+  </div>
+</div>
+
