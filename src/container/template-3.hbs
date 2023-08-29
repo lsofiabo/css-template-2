@@ -1,0 +1,57 @@
+<div class='header'>
+  <div class=''>
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class='header_nav_right'>
+      {{> nav list=header}}
+    </div>
+  </nav>
+</div>
+
+{{#with hero}}
+<div class='hero'>
+  <div class='hero_content'>
+    <h1 class='hero_title'>{{title}}</h1>
+    <p class='hero_text'>{{text}}</p>
+  </div>
+  <img class='hero_photo' src='{{photo}}' alt='Hero img' />
+</div>
+{{/with}}
+
+<div class='blog'>
+    {{#each blog}}
+      <div class='card'>
+        <div class='card-img' style='background-image: url({{img}})'></div>
+        <h1 class='card_title'>{{title}}</h1>
+        <p class='card-text'>{{text}}</p>
+        <a href='{{href}}' class='button card-link'>{{button}}</a>
+      </div>
+    {{/each}}
+</div>
+
+<div class='form'>
+  {{#with form}}
+  <div class='form-info'>
+    <h2 class='form-title'>{{title}}</h2>
+    <p class='form-text'>{{info}}</p>
+  </div>
+
+    <a href='{{href}}' class='button form-button'>{{button}}</a>
+  {{/with}}
+</div>
+
+<footer class='footer row'>
+  <div class='col-3'>
+    {{> logo}}
+      <span class='footer_copyright'>Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div class='col-3'>
+      <span class='footer_title'>{{title}}</span>
+      {{> nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+  
+</footer>
+
