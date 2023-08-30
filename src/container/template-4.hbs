@@ -1,0 +1,57 @@
+<div class='header'>
+  <div class=''>
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class='header_nav_right'>
+      {{> nav list=header}}
+    </div>
+  </nav>
+</div>
+
+<main class='hero'>
+  {{#with main}}
+    <img src='{{image}}' alt='Hero image' class='hero-image' />
+    <div class='hero-content'>
+      <h1 class='hero-title'>{{heading}}</h1>
+      <p class='hero-text'>{{description}}</p>
+      <a class='hero-button' href='{{href}}'>{{button}}</a>
+    </div>
+  {{/with}}
+</main>
+
+<div class='featured'>
+  {{#each featured}}
+    <div class='featured-card'>
+      <div class='featured-icon' style='background-image: url({{photo}})'></div>
+      <h1 class='featured-title'>{{heading}}</h1>
+      <p class='featured-text'>{{info}}</p>
+      <a href='{{linkUrl}}' class='featured-link'>{{linkText}}</a>
+    </div>
+  {{/each}}
+</div>
+
+<div class='actions'>
+  {{#each actions}}
+  <div class='actions-form'>
+    <h1 class='actions-title'>{{heading}}</h1>
+    <a href='{{url}}' class='actions-button'>{{text}}</a>
+  </div>
+  {{/each}}
+</div>
+
+
+<footer class='footer row'>
+  <div class='col-3'>
+    {{> logo}}
+      <span class='footer_copyright'>Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div class='col-3'>
+      <span class='footer_title'>{{title}}</span>
+      {{> nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+  
+</footer>
+
