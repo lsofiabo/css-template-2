@@ -1,0 +1,67 @@
+<div class='header'>
+  <div class=''>
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class='header_nav_right'>
+      {{> nav list=header}}
+    </div>
+  </nav>
+</div>
+
+<main class='main'>
+  {{#with messages}}
+    <div class='messages'>
+      <h1 class='messages-title'>{{title}}</h1>
+      {{#each list}}
+        {{>message data=this}}
+      {{/each}}
+      <a href='#' class='messages-link'>All mesages</a>
+    </div>
+  {{/with}}
+  {{#with form}}
+    <div class='form'>
+      <strong class='form-title'>{{title}}</strong>
+      <div class='form-input-field'>
+        {{#each inputs}}
+          <input class='form-input' type='{{type}}' name='{{name}}' id='{{id}}' placeholder='{{placeholder}}' />
+        {{/each}}
+      </div>
+      <div class='form-check-field'>
+        <input type='checkbox' name='{{checkbox.name}}' id='{{checkbox.name}}' />
+        <span></span>
+        <label for='{{checkbox.name}}'>{{checkbox.label}}</label>
+        
+      </div>
+
+      <button type='button' class='form-button'>{{button}}</button>
+      <p class='form-info'>{{info}}</p>
+
+    </div>
+  {{/with}}
+</main>
+
+<div class='advantages'>
+  {{#each advantages}}
+  <div class='advantage'>
+    <strong class='advantage-title'>{{title}}</strong>
+    <p class='advantage-text'>{{text}}</p>
+  </div>
+  {{/each}}
+
+</div>
+
+<footer class='footer row'>
+  <div class='col-3'>
+    {{> logo}}
+      <span class='footer_copyright'>Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div class='col-3'>
+      <span class='footer_title'>{{title}}</span>
+      {{> nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+  
+</footer>
+
