@@ -1,0 +1,77 @@
+<div class='header'>
+  <div class=''>
+    {{> logo}}
+  </div>
+  <nav class='header_nav'>
+    <div class='header_nav_right'>
+      {{> nav list=header}}
+    </div>
+  </nav>
+</div>
+
+<div class='hero'>
+  {{#with info}}
+  <div class='hero-info'>
+    <h1>{{title}}</h1>
+    <p>{{description}}</p>
+  </div>
+  {{/with}}
+  {{#with form}}
+  <div class='hero-form'>
+    <div class='hero-form-list'>
+      {{#each inputs}}
+        <input type='{{type}}' name='{{name}}' placeholder='{{placeholder}}' />
+      {{/each}}
+    </div>
+    <div class='hero-form-check-field'>
+      <input type='checkbox' name='{{checkbox.name}}' id='{{checkbox.name}}' />
+      <span></span>
+      <label for='{{checkbox.name}}'>{{checkbox.label}}</label>
+      
+    </div>
+    <button type='button' class='hero-form-button'>{{button}}</button>
+    <hr />
+    <p class='hero-form-info'>{{info}}</p>
+    
+  </div>
+  {{/with}}
+  
+</div>
+
+<div class='updates'>
+  {{#with updates}}
+  <strong class='updates-title'>{{title}}</strong>
+    {{#each list}}
+      {{> updates-item data=this}}
+    {{/each}}
+    <a href='{{show_all.url}}'>{{show_all.text}}</a>
+  {{/with}}
+</div>
+
+<div class='experience'>
+  {{#with experience}}
+  <span class='exp-badge'>{{badge}}</span>
+  <strong class='experience-title'>{{title}}</strong>
+    <div class='experience-list'>
+      {{#each list}}
+        {{> experience-item data=this}}
+      {{/each}}
+    </div>
+  {{/with}}
+</div>
+
+
+<footer class='footer row'>
+  <div class='col-3'>
+    {{> logo}}
+      <span class='footer_copyright'>Copyright 2023-2024</span>
+  </div>
+  {{#each footer}}
+    <div class='col-3'>
+      <span class='footer_title'>{{title}}</span>
+      {{> nav list=links isVertical=true}}
+    </div>
+  {{/each}}
+  
+</footer>
+
