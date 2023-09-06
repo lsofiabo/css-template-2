@@ -16,6 +16,13 @@ router.get('/', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+
+router.get('/dashboard', function (req, res) {
+  res.render('dashboard', {
+    layout: null,
+  })
+})
+
 // ================================================================
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
