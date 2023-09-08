@@ -146,11 +146,11 @@ body {
     border-radius: var(--radius-2);
     padding: var(--spacing-5);
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-items: flex-start;
+    gap: var(--spacing-2);
   }
+
 
   .relative {
     position: relative;
@@ -221,6 +221,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
+
+    gap: var(--spacing-5);
   }
 
   .analytic__button {
@@ -251,6 +253,10 @@ body {
 
   .vertical--small {
     gap: var(--spacing-2);
+  }
+
+  .vertical--smallest {
+    gap: var(--spacing-1);
   }
 
   .nav-button--active {
@@ -327,10 +333,21 @@ body {
 
   .analytic--lg {
     grid-row: span 2;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .analytic--blue {
     background-color: var(--color-blue-light);
+  }
+
+  .analytic--purple {
+    background-color: var(--color-purple-light);
+  }
+
+  .analytic--yellow {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
   }
 
   .analytic__button--blue {
