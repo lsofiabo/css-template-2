@@ -84,7 +84,7 @@
             <div class='analytic analytic--lg analytic--purple'>
 
               <span
-                class='icon analytic__button icon--button analytic__button--purple click'
+                class='icon analytic__button icon--button analytic__button--purple clickable'
                 style='background-image: url("/svg/main/analytics/money.svg")'
                 ></span>
 
@@ -104,14 +104,14 @@
             <div class='analytic analytic--lg analytic--blue'> 
 
               <span 
-                class='icon analytic__button icon--button analytic__button--blue click'
+                class='icon analytic__button icon--button analytic__button--blue clickable'
                 style='background-image: url("/svg/main/analytics/shopping.svg")'
                 ></span>
 
               <div class='vertical vertical--small'>
 
-                <div class='test text--light text--lg'>$961</div>
-                <div class='test text--secondary--light'>Total order</div>
+                <div class='text text--light text--lg'>$961</div>
+                <div class='text text--secondary--light'>Total order</div>
 
               </div>
 
@@ -120,7 +120,7 @@
             <div class='analytic analytic--blue'>
 
               <span
-                class='icon icon--button analytic__button analytic__button--blue click'
+                class='icon icon--button analytic__button analytic__button--blue clickable'
                 style='background-image: url("/svg/main/analytics/money.svg")'
                 ></span>
 
@@ -134,7 +134,7 @@
             <div class='analytic analytic--yellow'>
 
               <span
-                class='icon icon--button analytic__button icon--button--yellow click'
+                class='icon icon--button analytic__button icon--button--yellow clickable'
                 style='background-image: url("/svg/main/analytics/shop.svg")'
                 ></span>
               <div>
@@ -145,6 +145,118 @@
             </div>
 
           </section>
+        </div>
+        <div class='layout'>
+          
+          <section class='main__actions'>
+            <div class='box purchase-list vertical'>
+              <div class='text text--heading'> Purchase list </div>
+              <hr class='divider' />
+              <div class='purchase-list__item'>
+                
+                <div class='text'> ID437661 </div>
+                <div class='text'> AirOn ProCam </div>
+                <div class='text'> 132.32 EUR </div>
+                <div class='text'> Customer </div>
+
+                <div class='text'> May 11, 2023, 14:21 </div>
+                <div class='text'> 7/8 USB Type-C </div>
+                <div class='text text--danger'> Not paid </div>
+                <div class='text'> robin@com.de </div>
+                
+              </div>
+              <hr class='divider' />
+              <div class='purchase-list__item'>
+                
+                <div class='text'> ID437661 </div>
+                <div class='text'> PHILIPS Essential </div>
+                <div class='text'> 543 USD </div>
+                <div class='text'> Customer </div>
+
+                <div class='text'> May 11, 2023, 14:21 </div>
+                <div class='text'> HD9200/90 </div>
+                <div class='text text--success'> Pay by  Stripe </div>
+                <div class='text'> dima@com.ua </div>
+                
+              </div>
+            </div>
+            <div class='box vertical vertical--lg'>
+              <div class='text text--heading'> Payment </div>
+              <hr class='divider' />
+              <div class='vertical vertical--small'>
+
+                <form class='payment-method'>
+
+                  <span class='payment-method__radio-over'></span>
+                  <input type='radio' name='method' id='credit-card' class='payment-method__radio' />
+                  <label for='credit-card' class='text'>Credit card</label>
+
+                  <span class='payment-method__radio-over'></span>
+                  <input type='radio' name='method' id='debit-card' class='payment-method__radio' />
+                  <label for='debit-card' class='text'>Debit card</label>
+
+                  <span class='payment-method__radio-over'></span>
+                  <input type='radio' name='method' id='PayPal' class='payment-method__radio' />
+                  <label for='PayPal' class='text'>PayPal</label>
+
+                </form>
+                <div class='payment-data'>
+
+                  <label for='card-name' class='text'>Name on card</label>
+                  <label for='card-name' class='text'>Credit card number</label>
+
+                  <input class='field field--sm' type='text' name='payment-data' id='card-name' />
+                  <input class='field field--sm' type='text' name='payment-data' id='card-name' />
+
+                  <label for='card-name' class='text'>Expiration</label>
+                  <label for='card-name' class='text'>CVV</label>
+
+                  <input class='field field--sm' type='text' name='payment-data' id='card-name' />
+                  <input class='field field--sm' type='text' name='payment-data' id='card-name' />
+
+                </div>
+              </div>
+                
+              <hr class='divider' />
+                
+              <div class='payment-address'>
+
+                <span class='text'>Country</span>
+                <span class='text'>State</span>
+                  
+                <div class='field field--sm relative'>
+                  
+                  <span class='text'>Choose...</span>
+                  <span class='icon select__arrow'></span>
+                  <select class='field-select clickable--hidden'>
+                    <option value='A'>A</option>
+                    <option value='B'>B</option>
+                    <option value='C'>C</option>
+                  </select>
+                  
+                </div>
+
+
+                <div class='field field--sm relative'>
+                   
+                  <span class='text'>Choose...</span>
+                  <span class='icon select__arrow'></span>
+                  <select class='field-select clickable--hidden'>
+                    <option value='D'>D</option>
+                    <option value='E'>E</option>
+                    <option value='F'>F</option>
+                  </select>
+                  
+                </div>
+                
+              </div>
+
+              <hr class='divider' />
+                
+              <button type='button' class='button button--blue text text--light'>Continue to checkout</button>
+            </div>
+          </section>
+          
         </div>
       </main>
       
